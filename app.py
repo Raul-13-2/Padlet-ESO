@@ -18,6 +18,10 @@ def index():
 def mates():
     return render_template('mates.html')
 
+@app.route('/chomik')
+def chomik():
+    return render_template('chomik.html')
+
 if __name__ == '__main__':
     # Esto solo se ejecuta en tu ordenador con 'python app.py'
     app.run(debug=True)
