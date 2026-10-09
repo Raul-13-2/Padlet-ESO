@@ -8,10 +8,11 @@ class deure:
         self.fer = deure
 
 vacio = deure("","")
+deures = [vacio]
 
 @app.route('/')
 def index():
-    return render_template('index.html', deure=vacio)
+    return render_template('index.html', deures=deures)
 
 if __name__ == '__main__':
     # Esto solo se ejecuta en tu ordenador con 'python app.py'

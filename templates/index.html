@@ -15,7 +15,9 @@
         <h3>Deures</h3>
     
         <ul>
+            {%for deure in deures%}
             <li>{{deure.titol}}: {{deure.fer}}</li>
+            {%endfor%}
         </ul>
 
     </body>
