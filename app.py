@@ -14,6 +14,10 @@ deures = [vacio]
 def index():
     return render_template('index.html', deures=deures)
 
+@app.route('/mates')
+def mates():
+    return render_template('mates.html')
+
 if __name__ == '__main__':
     # Esto solo se ejecuta en tu ordenador con 'python app.py'
     app.run(debug=True)
