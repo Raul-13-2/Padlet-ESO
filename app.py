@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 import requests
 
 app = Flask(__name__)
@@ -24,7 +24,10 @@ def chomik():
 
 @app.route("/api")
 def api():
-    return deures
+    lista = []
+    for deure in deures:
+        lista.append({"titol": deure.titol, "fer": deure.fer})
+    return jsonify(lista)
 
 if __name__ == '__main__':
     # Esto solo se ejecuta en tu ordenador con 'python app.py'
