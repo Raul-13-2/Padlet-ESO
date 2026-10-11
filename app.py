@@ -7,7 +7,7 @@ class deure:
         self.titol = titol
         self.fer = deure
 
-vacio = deure("","")
+vacio = deure("Mates","Fer expliquem 1, 2, 3, 4")
 deures = [vacio]
 
 @app.route('/')

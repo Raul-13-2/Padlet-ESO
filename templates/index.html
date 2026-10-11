@@ -5,8 +5,8 @@
         <meta charset="UTF-8" />
         <meta property="og:title" content="2nESO deures">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="https://padlet-eso.onrender.com/fotos/favicon.ico">
-        <meta property="og:url" content="https://padlet-eso.onrender.com">
+        <meta property="og:image" content="{{url_for('static', filename='fotos/favicon.ico')}}">
+        <meta property="og:url" content="{{url_for('index')}}">
         <title>2nESO deures</title>
         <link rel="icon" href="{{url_for('static', filename='fotos/favicon.ico')}}">
     </head>
@@ -20,9 +20,9 @@
             {%endfor%}
         </ul>
         
-        <a href="/mates" target="_blank">Aprendre mates</a>
+        <a href="{{url_for('mates')}}" target="_blank">Aprendre mates</a>
 
-        <p><a href="/chomik" target="_blank">
+        <p><a href="{{url_for('chomik')}}" target="_blank">
             Secret link
         </a></p>
     </body>
