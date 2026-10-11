@@ -22,6 +22,10 @@ def mates():
 def chomik():
     return render_template('chomik.html')
 
+@app.route("/api")
+def api():
+    return deures
+
 if __name__ == '__main__':
     # Esto solo se ejecuta en tu ordenador con 'python app.py'
     app.run(debug=True)
