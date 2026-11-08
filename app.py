@@ -1,14 +1,17 @@
 from flask import Flask, render_template, jsonify
 import requests
-
+import csv
+url = "https://docs.google.com/spreadsheets/d/1sfp7PK89RgPgktWJJDREiZKOrSq_W8Jzx020GBvuq0A/export?format=csv"
 app = Flask(__name__)
 class deure:
-    def __init__(self, titol, deure):
+    def __init__(self, titol, deure, data):
         self.titol = titol
         self.fer = deure
+        self.data = data
 
-vacio = deure("Mates","Fer expliquem 1, 2, 3, 4")
-deures = [vacio]
+lineas = (linea.decode("utf-8") for linea in requests.get(url).iter_lines())
+lector = csv.DictReader(lineas)
+deures = [deure(linea["Titol"], linea["Deure"], linea["Data"]) for linea in lector]
 
 @app.route('/')
 def index():
