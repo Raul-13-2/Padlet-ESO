@@ -29,7 +29,7 @@ def chomik():
 def api():
     lista = []
     for deure in deures:
-        lista.append({"titol": deure.titol, "fer": deure.fer})
+        lista.append({"titol": deure.titol, "fer": deure.fer, "data": deure.data})
     return jsonify(lista)
 
 if __name__ == '__main__':
