@@ -31,6 +31,9 @@ def api():
     for deure in deures:
         lista.append({"titol": deure.titol, "fer": deure.fer, "data": deure.data})
     return jsonify(lista)
+@app.route("/Tarek-recetas")
+def tarek_recetas():
+    return render_template('Tarek-recetas.html')
 
 if __name__ == '__main__':
     # Esto solo se ejecuta en tu ordenador con 'python app.py'
